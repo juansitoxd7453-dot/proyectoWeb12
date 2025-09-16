@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artículos - Biblioteca Virtual</title>
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      margin: 0; 
+      padding: 0; 
+      background: white;
+    }
+    header { 
+      background: #2c3e50; 
+      color: white; 
+      padding: 20px; 
+      text-align: center; 
+    }
+    nav a { 
+      color: white; 
+      margin: 0 15px; 
+      text-decoration: none; 
+      padding: 6px 12px; 
+      border-radius: 5px; 
+    }
+    nav a:hover { background: blue; }
+    nav a:active { background:orange; }
+
+    .contenedor { 
+      padding: 20px; 
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); 
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px black;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px black;
+    }
+
+    .card h3 {
+      margin: 15px;
+      font-size: 20px;
+      color: black;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px; 
+      object-fit: cover; 
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    
+    .articulo { 
+      margin: 8px 0; 
+      padding: 10px; 
+      border-radius: 6px; 
+      background: #f9f9f9; 
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+    .articulo:hover { border-color: teal; }
+
+  </style>
+</head> 
+<body>
+  <header>
+    <h1> Biblioteca Virtual</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="libros.html">Libros</a>
+      <a href="articulos.html">Artículos</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+  
+  <div class="contenedor">
+
+    <div class="card">
+      <h3> 💻 Tecnología</h3>
+      <img src="img/tecnologia.webp" alt="Tecnología">
+      <div class="card-content">
+        <div class="articulo">Inteligencia Artificial en 2025</div>
+        <div class="articulo">El futuro de la Realidad Virtual</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🔬 Ciencia</h3>
+      <img src="img/Ciencia.jpg" alt="Ciencia">
+      <div class="card-content">
+        <div class="articulo">Avances en Biotecnología</div>
+        <div class="articulo">Exploración Espacial Moderna</div>
+      </div>
+    </div>
+
+    
+    <div class="card">
+      <h3>🕴️ Negocios</h3>
+      <img src="img/negocios.jpg" alt="Negocios">
+      <div class="card-content">
+        <div class="articulo">Nuevas Estrategias de Inversión</div>
+        <div class="articulo">Transformación Digital en Empresas</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

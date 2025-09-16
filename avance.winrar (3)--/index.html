@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca Virtual</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; }
+    header { background: #2c3e50; color: white; padding: 20px; text-align: center; }
+    header h1 { margin: 0; }
+   
+    nav a {
+      color: white; text-decoration: none;
+      margin: 0 15px; padding: 6px 12px;
+      border-radius: 5px;
+    } 
+    nav a:hover { background: white; }
+    nav a:active { background: red; }
+
+    .contenedor { padding: 20px; max-width: 1100px; margin: auto; }
+
+    
+    .buscador { display: flex; justify-content: center; margin-bottom: 20px; }
+    .buscador input {
+      padding: 10px; width: 60%; border: 2px solid #ccc; border-radius: 5px 0 0 5px;
+    }
+    .buscador button {
+      padding: 10px 15px; border: 2px solid #ccc; border-left: none;
+      background: blue; color: white; border-radius: 0 5px 5px 0; 
+    }
+
+    
+    h2 { margin-top: 30px; color: red; }
+    .grid-libros {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white; border: 2px solid #ccc; border-radius: 10px;
+      padding: 15px; text-align: center; transition: 0.3s;
+    }
+    .card:hover { border-color: #3498db; box-shadow: 0 0 10px white; }
+
+    .categorias {
+      margin-top: 30px;
+      display: flex; flex-direction: column; gap: 15px;
+      max-width: 300px;
+    }
+    .categorias button {
+      padding: 12px; border: 2px solid blue;
+      background: white; border-radius: 8px; cursor: pointer;
+      text-align: left; font-weight: bold;
+    }
+    .categorias button:hover { background: rgb(109, 43, 43); }
+    .categorias button:active { background: blue; color: white; }
+
+   
+    @media (max-width: 700px) {
+      .buscador { flex-direction: column; align-items: center; }
+      .buscador input { width: 100%; border-radius: 5px; margin-bottom: 10px; }
+      .buscador button { border-radius: 5px; width: 100%; }
+      .categorias { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📚 Biblioteca Virtual</h1>
+    <nav>
+      <a href="index.">Inicio</a>
+      <a href="libros.html">Libros</a>
+      <a href="articulos.html">Artículos</a>
+      <a href="contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <div class="contenedor">
+    
+  
+    <div class="buscador">
+      <input type="text" placeholder="Buscar libros, artículos...">
+      <button>Filtros</button>
+    </div>
+
+    <h2>Libros Destacados</h2>
+    <div class="grid-libros">
+      <div class="card"> Mario Vargas Llosa</div>
+      <div class="card"> Paco Yunque</div>
+      <div class="card"> El león dormido</div>
+      <div class="card"> La construccion de la torre Eifel</div>
+      <div class="card"> Cien años de soledad</div>
+    </div>
+
+    <h2>Explorar Artículos por Categoría</h2>
+    <div class="categorias">
+      <button> 💻 Tecnología</button>
+      <button> 🧪 Ciencia</button>
+      <button> 🕴️ Negocios</button>
+    </div>
+
+    <section class="formulario-reserva">
+  <h2>📖 Formulario de Reserva</h2>
+  
+    
+    <label for="nombre">Nombre completo:</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" required>
+
+   
+    <label for="correo">Correo electrónico:</label>
+    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+
+    
+    <label for="celular">Número de celular:</label>
+    <input type="tel" id="celular" name="celular" placeholder="999 999 999" required>
+
+ 
+    <label for="libro">Selecciona un libro:</label>
+    <select id="libro" name="libro" required>
+      <option value="">-- Selecciona --</option>
+
+      <optgroup label=" Tecnología">
+        <option value="ia-2025">Inteligencia Artificial en 2025</option>
+        <option value="realidad-virtual">El futuro de la Realidad Virtual</option>
+      </optgroup>
+
+      <optgroup label= "Ciencia">
+        <option value="biotecnologia">Avances en Biotecnología</option>
+        <option value="espacial">Exploración Espacial Moderna</option>
+      </optgroup>
+
+      <optgroup label=" Negocios">
+        <option value="inversion">Nuevas Estrategias de Inversión</option>
+        <option value="transformacion-digital">Transformación Digital en Empresas</option>
+      </optgroup>
+    </select>
+
+    
+    <label for="fecha-inicio">Fecha de inicio</label>
+    <input type="date" id="fecha-inicio" name="fecha-inicio">
+
+    <label for="fecha-devolucion">Fecha de devolución</label>
+    <input type="date" id="fecha-devolucion" name="fecha-devolucion">
+
+    
+    <button type="submit"> Reservar</button>
+</section>
+
+       
+      <div></div><div></div><div></div><div></div><div></div>
+    </div>
+  </div>
+</body>
+</html>
